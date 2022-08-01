@@ -15,6 +15,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var lblOverview: UILabel!
     
     var content: MovieList!
+    var genres = ["Family","Animation", "Adventure", "Comedy", "Fantasy"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,4 +36,38 @@ class MovieDetailViewController: UIViewController {
  
     }
     
+}
+
+extension MovieDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return genres.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GenresCollectionViewCell", for: indexPath) as! GenresCollectionViewCell
+        cell.lblName.text = genres[indexPath.row]
+        cell.bgView.backgroundColor =   .random()
+        
+        return cell
+    }
+    
+}
+
+extension UIColor {
+    static func random() -> UIColor {
+        return UIColor(
+           red:   .random(),
+           green: .random(),
+           blue:  .random(),
+           alpha: 1.0
+        )
+    }
+}
+
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
 }

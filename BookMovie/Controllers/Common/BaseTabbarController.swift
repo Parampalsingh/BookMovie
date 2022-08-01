@@ -30,6 +30,8 @@ class BaseTabbarController: UITabBarController, UITabBarControllerDelegate {
         self.tabBar.tintColor  =    UIColor.white
         self.tabBar.barTintColor = UIColor(red: 46/255.0, green: 39/255.0, blue: 57/255.0, alpha: 1.0)
         self.tabBar.isTranslucent = true
+        self.tabBar.layer.cornerRadius = 20
+        self.tabBar.clipsToBounds = true
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
