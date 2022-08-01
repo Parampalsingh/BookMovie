@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Il2-9J-jze">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="ihJ-G5-BnL">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Il2-9J-jze" customClass="SplashViewController" customModule="BookMyMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fSx-D2-Suo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ER7-8w-cpf">
+                                <rect key="frame" x="30" y="325.5" width="354" height="245"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BJx-DT-JNc"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ER7-8w-cpf" firstAttribute="leading" secondItem="BJx-DT-JNc" secondAttribute="leading" constant="30" id="8Tb-K5-Lh5"/>
+                            <constraint firstItem="BJx-DT-JNc" firstAttribute="trailing" secondItem="ER7-8w-cpf" secondAttribute="trailing" constant="30" id="RKA-FH-dfF"/>
+                            <constraint firstItem="ER7-8w-cpf" firstAttribute="centerY" secondItem="fSx-D2-Suo" secondAttribute="centerY" id="bLx-sW-DZB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gxu-Fw-hhS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="341.33334350585938" height="245.33332824707031"/>
+    </resources>
+</document>
